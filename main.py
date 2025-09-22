@@ -1,3 +1,7 @@
+"""
+Module de lecture et manipulation de listes d'entiers à partir d'un fichier CSV.
+Exercice ESIEE - Lecture de données
+"""
 #### Imports et définition des variables globales
 
 FILENAME = "listes.csv"
@@ -5,7 +9,8 @@ FILENAME = "listes.csv"
 #### Fonctions secondaires
 
 def read_data(filename):
-    """retourne le contenu du fichier <filename>
+    """
+    Lit le fichier <filename> et retourne une liste de listes d'entiers.
 
     Args:
         filename (str): nom du fichier à lire
@@ -20,22 +25,40 @@ def read_data(filename):
     return data
 
 def get_list_k(data, k):
+    """
+    Retourne la k-ième liste de la liste de listes.
+    """
     # Retourne la k-ième liste (indice k)
     return data[k]
 
 def get_first(l):
+    """
+    Retourne le premier élément d'une liste.
+    """
     return l[0] if l else None
 
 def get_last(l):
+    """
+    Retourne le dernier élément d'une liste.
+    """
     return l[-1] if l else None
 
 def get_max(l):
+    """
+    Retourne le maximum d'une liste.
+    """
     return max(l) if l else None
 
 def get_min(l):
+    """
+    Retourne le minimum d'une liste.
+    """
     return min(l) if l else None
 
 def get_sum(l):
+    """
+    Retourne la somme des éléments d'une liste.
+    """
     return sum(l) if l else None
 
 
@@ -43,6 +66,9 @@ def get_sum(l):
 
 
 def main():
+    """
+    Fonction principale pour tester les fonctions de manipulation de listes.
+    """
     data = read_data(FILENAME)
     print("Données lues :")
     for i, l in enumerate(data):
